@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-</html>
+<html>
     </head>
         <meta charset= "utf-8"
 </head>
@@ -14,9 +14,32 @@
     </select>
     
     <p></p>
+    select.onchange = setWeather;
+     <script>
+         const select = document.querySelector ('select');
+         const para = documemt.querySelector('p');
 
-    <script>
-        const select = document.querySelector('select');
+    select.onchange = setWeather
+
+    function setWeather(){
+        const choice = select.value
+
+        if (choice === "sunny"){
+            para.textContent = "It\'s nice and sunny."
+        }
+        else if (choice === "rainy"){
+            para.textContent = "Rain is falling.";
+        }
+        else if (choice === "snowing"){
+            para.textContent ="It\'s snowing outside.";
+        }
+        else if (choice === "overcast"){
+            para.textContent = "The sun is hidden.";
+        }
+        else{
+        para.textContent = "";
+        }
     </script>
     
 </body>    
+</html>
